@@ -2,13 +2,14 @@ data = "mgwwjddqzqdqsstctjjsdjsdsrsfsmfsfwwltwlwhwnhhlffzddgffwlffbsfshfshhgvvdr
 
 chars = list(data)
 
+window_size = 14
 window = list()
 position = 1
 for c in chars:
     window.append(c)
-    if len(set(window)) == 4:
+    if len(set(window)) == window_size:
         break
-    if len(window) >= 4:
+    if len(window) >= window_size:
         window = window[1:]
     position += 1
 
